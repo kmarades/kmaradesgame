@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://flying swamp.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://flying swamp.png" type="Texture" id=2]
+[ext_resource path="res://Testy2.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Testy2.png" type="Texture" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 4 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.0557, -0.421962, 0.904901, 0, 0.906308, 0.422618, -0.998448, 0.0235398, -0.0504813, 16.6765, 7.10439, -2.54228 )
+light_color = Color( 0.878431, 0.745098, 0.482353, 1 )
+light_energy = 1.97
+light_indirect_energy = 2.29
+shadow_enabled = true
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.32126, 11.4656, 0 )
+light_color = Color( 0.964706, 0.87451, 0.6, 1 )
+light_energy = 0.35
+shadow_enabled = true
+
+[node name="flying swamp" type="MeshInstance" parent="."]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -80, -40, 80 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="Testy2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="Testy2"]
+transform = Transform( -1, -1.77636e-015, -8.74228e-008, -2.94377e-008, 0.941602, 0.336728, 8.23175e-008, 0.336728, -0.941602, 2.42824, 15.9409, -18.2517 )

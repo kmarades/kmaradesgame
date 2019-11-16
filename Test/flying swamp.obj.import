@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flying swamp.obj-82307a62483700cfcdfb32cb9ea0696b.mesh"
+
+[deps]
+
+files=[ "res://.import/flying swamp.obj-82307a62483700cfcdfb32cb9ea0696b.mesh" ]
+
+source_file="res://flying swamp.obj"
+dest_files=[ "res://.import/flying swamp.obj-82307a62483700cfcdfb32cb9ea0696b.mesh", "res://.import/flying swamp.obj-82307a62483700cfcdfb32cb9ea0696b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
